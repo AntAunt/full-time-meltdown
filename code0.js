@@ -39,6 +39,20 @@ gdjs.GameCode.mapOfGDgdjs_46GameCode_46GDBluePlayerObjects1Objects = Hashtable.n
 
 gdjs.GameCode.condition0IsTrue_0.val = false;
 {
+gdjs.GameCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPressed(runtimeScene, "t");
+}if (gdjs.GameCode.condition0IsTrue_0.val) {
+}
+
+}
+
+
+};gdjs.GameCode.eventsList1 = function(runtimeScene) {
+
+{
+
+
+gdjs.GameCode.condition0IsTrue_0.val = false;
+{
 gdjs.GameCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 }if (gdjs.GameCode.condition0IsTrue_0.val) {
 }
@@ -126,7 +140,7 @@ gdjs.GameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(ru
 
 gdjs.GameCode.condition0IsTrue_0.val = false;
 {
-gdjs.GameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(2)) == 0;
+gdjs.GameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(2)) <= 0;
 }if (gdjs.GameCode.condition0IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Game Over", false);
 }}
@@ -139,7 +153,6 @@ gdjs.GameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(ru
 
 {
 gdjs.copyArray(runtimeScene.getObjects("Points"), gdjs.GameCode.GDPointsObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Speed"), gdjs.GameCode.GDSpeedObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Timer"), gdjs.GameCode.GDTimerObjects1);
 {runtimeScene.getVariables().getFromIndex(1).add(1);
 }{for(var i = 0, len = gdjs.GameCode.GDTimerObjects1.length ;i < len;++i) {
@@ -148,11 +161,8 @@ gdjs.copyArray(runtimeScene.getObjects("Timer"), gdjs.GameCode.GDTimerObjects1);
 }{for(var i = 0, len = gdjs.GameCode.GDPointsObjects1.length ;i < len;++i) {
     gdjs.GameCode.GDPointsObjects1[i].setString("Points: " + gdjs.evtTools.common.toString(gdjs.evtTools.common.trunc(gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)) / 100)));
 }
-}{gdjs.evtTools.runtimeScene.setTimeScale(runtimeScene, 1 + gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)) * 0.00005);
-}{runtimeScene.getVariables().getFromIndex(2).sub(1);
-}{for(var i = 0, len = gdjs.GameCode.GDSpeedObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDSpeedObjects1[i].setString("Speed: " + gdjs.evtTools.common.toString(1 + gdjs.evtTools.common.trunc(gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)) * 0.005) / 100));
-}
+}{gdjs.evtTools.runtimeScene.setTimeScale(runtimeScene, 1);
+}{runtimeScene.getVariables().getFromIndex(2).sub(1 + (gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)) * 0.000025));
 }}
 
 }
@@ -304,7 +314,7 @@ for(var i = 0, k = 0, l = gdjs.GameCode.GDFlyingEnemyObjects1.length;i<l;++i) {
 gdjs.GameCode.GDFlyingEnemyObjects1.length = k;}if (gdjs.GameCode.condition0IsTrue_0.val) {
 /* Reuse gdjs.GameCode.GDFlyingEnemyObjects1 */
 {for(var i = 0, len = gdjs.GameCode.GDFlyingEnemyObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDFlyingEnemyObjects1[i].addPolarForce(90, 50, 0);
+    gdjs.GameCode.GDFlyingEnemyObjects1[i].addPolarForce(90, 80 + (gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)) * 0.005), 0);
 }
 }}
 
@@ -473,7 +483,7 @@ gdjs.GameCode.GDBluePlayerObjects1.length = k;}}
 if (gdjs.GameCode.condition1IsTrue_0.val) {
 /* Reuse gdjs.GameCode.GDBluePlayerObjects1 */
 {for(var i = 0, len = gdjs.GameCode.GDBluePlayerObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDBluePlayerObjects1[i].addForce(300, 0, 0);
+    gdjs.GameCode.GDBluePlayerObjects1[i].addForce(400, 0, 0);
 }
 }}
 
@@ -501,9 +511,25 @@ gdjs.GameCode.GDBluePlayerObjects1.length = k;}}
 if (gdjs.GameCode.condition1IsTrue_0.val) {
 /* Reuse gdjs.GameCode.GDBluePlayerObjects1 */
 {for(var i = 0, len = gdjs.GameCode.GDBluePlayerObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDBluePlayerObjects1[i].addForce(-(300), 0, 0);
+    gdjs.GameCode.GDBluePlayerObjects1[i].addForce(-(400), 0, 0);
 }
 }}
+
+}
+
+
+{
+
+
+gdjs.GameCode.condition0IsTrue_0.val = false;
+{
+gdjs.GameCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPressed(runtimeScene, "t");
+}if (gdjs.GameCode.condition0IsTrue_0.val) {
+{runtimeScene.getVariables().getFromIndex(3).setNumber(1);
+}
+{ //Subevents
+gdjs.GameCode.eventsList0(runtimeScene);} //End of subevents
+}
 
 }
 
@@ -540,7 +566,7 @@ gdjs.GameCode.GDSpeedObjects2.length = 0;
 gdjs.GameCode.GDNewObject2Objects1.length = 0;
 gdjs.GameCode.GDNewObject2Objects2.length = 0;
 
-gdjs.GameCode.eventsList0(runtimeScene);
+gdjs.GameCode.eventsList1(runtimeScene);
 return;
 
 }
