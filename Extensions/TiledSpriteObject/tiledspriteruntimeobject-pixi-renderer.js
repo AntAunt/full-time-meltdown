@@ -62,12 +62,6 @@ var gdjs;
       const rgb = PIXI.utils.hex2rgb(this._tiledSprite.tint);
       return Math.floor(rgb[0] * 255) + ";" + Math.floor(rgb[1] * 255) + ";" + Math.floor(rgb[2] * 255);
     }
-    getTextureWidth() {
-      return this._tiledSprite.texture.width;
-    }
-    getTextureHeight() {
-      return this._tiledSprite.texture.height;
-    }
   }
   gdjs2.TiledSpriteRuntimeObjectRenderer = TiledSpriteRuntimeObjectPixiRenderer;
 })(gdjs || (gdjs = {}));

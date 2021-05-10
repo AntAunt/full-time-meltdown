@@ -7,8 +7,6 @@ var gdjs;
       this._yOffset = 0;
       this.opacity = 255;
       this._renderer = new gdjs2.TiledSpriteRuntimeObjectRenderer(this, runtimeScene, tiledSpriteObjectData.texture);
-      this._width = 0;
-      this._height = 0;
       this.setWidth(tiledSpriteObjectData.width);
       this.setHeight(tiledSpriteObjectData.height);
       this.onCreated();
@@ -56,24 +54,16 @@ var gdjs;
       this._renderer.updateAngle();
     }
     getWidth() {
-      return this._width;
+      return this._renderer.getWidth();
     }
     getHeight() {
-      return this._height;
+      return this._renderer.getHeight();
     }
     setWidth(width) {
-      if (this._width === width)
-        return;
-      this._width = width;
       this._renderer.setWidth(width);
-      this.hitBoxesDirty = true;
     }
     setHeight(height) {
-      if (this._height === height)
-        return;
-      this._height = height;
       this._renderer.setHeight(height);
-      this.hitBoxesDirty = true;
     }
     setXOffset(xOffset) {
       this._xOffset = xOffset;
@@ -107,25 +97,6 @@ var gdjs;
     }
     getColor() {
       return this._renderer.getColor();
-    }
-    getScale() {
-      return (this.getScaleX() + this.getScaleY()) / 2;
-    }
-    getScaleX() {
-      return this._width / this._renderer.getTextureWidth();
-    }
-    getScaleY() {
-      return this._height / this._renderer.getTextureHeight();
-    }
-    setScale(newScale) {
-      this.setWidth(this._renderer.getTextureWidth() * newScale);
-      this.setHeight(this._renderer.getTextureHeight() * newScale);
-    }
-    setScaleX(newScale) {
-      this.setWidth(this._renderer.getTextureWidth() * newScale);
-    }
-    setScaleY(newScale) {
-      this.setHeight(this._renderer.getTextureHeight() * newScale);
     }
   }
   gdjs2.TiledSpriteRuntimeObject = TiledSpriteRuntimeObject;

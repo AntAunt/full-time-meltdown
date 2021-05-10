@@ -4,10 +4,6 @@ var gdjs;
     constructor() {
       this._elapsedTime = 0;
       this._timeScale = 1;
-      this._timeFromStart = 0;
-      this._firstFrame = true;
-      this._timers = new Hashtable();
-      this._firstUpdateDone = false;
       this.reset();
     }
     reset() {

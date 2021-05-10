@@ -150,32 +150,23 @@ var gdjs;
       return (Math.abs(this._scaleX) + Math.abs(this._scaleY)) / 2;
     }
     getScaleX() {
-      return this._scaleX;
+      return this._renderer.getScaleX();
     }
     getScaleY() {
-      return this._scaleY;
+      return this._renderer.getScaleY();
     }
     setScale(newScale) {
-      if (this._scaleX === newScale && this._scaleY === newScale)
-        return;
       this._scaleX = newScale;
       this._scaleY = newScale;
       this._renderer.setScale(newScale);
-      this.hitBoxesDirty = true;
     }
     setScaleX(newScale) {
-      if (this._scaleX === newScale)
-        return;
       this._scaleX = newScale;
       this._renderer.setScaleX(newScale);
-      this.hitBoxesDirty = true;
     }
     setScaleY(newScale) {
-      if (this._scaleY === newScale)
-        return;
       this._scaleY = newScale;
       this._renderer.setScaleY(newScale);
-      this.hitBoxesDirty = true;
     }
     setColor(str) {
       const color = str.split(";");
@@ -188,7 +179,7 @@ var gdjs;
       this._useGradient = false;
       this._renderer.updateStyle();
     }
-    getColor() {
+    getColor(str) {
       return this._color[0] + ";" + this._color[1] + ";" + this._color[2];
     }
     setTextAlignment(alignment) {
@@ -202,11 +193,8 @@ var gdjs;
       return this._wrapping;
     }
     setWrapping(enable) {
-      if (this._wrapping === enable)
-        return;
       this._wrapping = enable;
       this._renderer.updateStyle();
-      this.hitBoxesDirty = true;
     }
     getWrappingWidth() {
       return this._wrappingWidth;
@@ -215,11 +203,8 @@ var gdjs;
       if (width <= 1) {
         width = 1;
       }
-      if (this._wrappingWidth === width)
-        return;
       this._wrappingWidth = width;
       this._renderer.updateStyle();
-      this.hitBoxesDirty = true;
     }
     setOutline(str, thickness) {
       const color = str.split(";");
