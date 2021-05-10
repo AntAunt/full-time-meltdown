@@ -21,6 +21,19 @@ gdjs.PromotionCode.eventsList0 = function(runtimeScene) {
 {
 
 
+gdjs.PromotionCode.condition0IsTrue_0.val = false;
+{
+gdjs.PromotionCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+}if (gdjs.PromotionCode.condition0IsTrue_0.val) {
+{gdjs.evtTools.sound.playSound(runtimeScene, "New Life.wav", false, 10, 1);
+}}
+
+}
+
+
+{
+
+
 {
 gdjs.copyArray(runtimeScene.getObjects("Context"), gdjs.PromotionCode.GDContextObjects1);
 gdjs.copyArray(runtimeScene.getObjects("CurrentScore"), gdjs.PromotionCode.GDCurrentScoreObjects1);

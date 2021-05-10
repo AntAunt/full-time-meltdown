@@ -1,40 +1,58 @@
 gdjs.GameCode = {};
 gdjs.GameCode.GDBluePlayerObjects1= [];
 gdjs.GameCode.GDBluePlayerObjects2= [];
+gdjs.GameCode.GDBluePlayerObjects3= [];
 gdjs.GameCode.GDFlyingEnemyObjects1= [];
 gdjs.GameCode.GDFlyingEnemyObjects2= [];
+gdjs.GameCode.GDFlyingEnemyObjects3= [];
 gdjs.GameCode.GDBlueCrystal2Objects1= [];
 gdjs.GameCode.GDBlueCrystal2Objects2= [];
+gdjs.GameCode.GDBlueCrystal2Objects3= [];
 gdjs.GameCode.GDSmallNotBluePlatformObjects1= [];
 gdjs.GameCode.GDSmallNotBluePlatformObjects2= [];
+gdjs.GameCode.GDSmallNotBluePlatformObjects3= [];
 gdjs.GameCode.GDSmallBluePlatformObjects1= [];
 gdjs.GameCode.GDSmallBluePlatformObjects2= [];
+gdjs.GameCode.GDSmallBluePlatformObjects3= [];
 gdjs.GameCode.GDPurpleFloorObjects1= [];
 gdjs.GameCode.GDPurpleFloorObjects2= [];
+gdjs.GameCode.GDPurpleFloorObjects3= [];
 gdjs.GameCode.GDYellowFloorObjects1= [];
 gdjs.GameCode.GDYellowFloorObjects2= [];
+gdjs.GameCode.GDYellowFloorObjects3= [];
 gdjs.GameCode.GDBlueFloorObjects1= [];
 gdjs.GameCode.GDBlueFloorObjects2= [];
+gdjs.GameCode.GDBlueFloorObjects3= [];
 gdjs.GameCode.GDGreenFloorObjects1= [];
 gdjs.GameCode.GDGreenFloorObjects2= [];
+gdjs.GameCode.GDGreenFloorObjects3= [];
 gdjs.GameCode.GDRedFloorObjects1= [];
 gdjs.GameCode.GDRedFloorObjects2= [];
+gdjs.GameCode.GDRedFloorObjects3= [];
 gdjs.GameCode.GDGreenFlagObjects1= [];
 gdjs.GameCode.GDGreenFlagObjects2= [];
+gdjs.GameCode.GDGreenFlagObjects3= [];
 gdjs.GameCode.GDLivesObjects1= [];
 gdjs.GameCode.GDLivesObjects2= [];
+gdjs.GameCode.GDLivesObjects3= [];
 gdjs.GameCode.GDTimerObjects1= [];
 gdjs.GameCode.GDTimerObjects2= [];
+gdjs.GameCode.GDTimerObjects3= [];
 gdjs.GameCode.GDPointsObjects1= [];
 gdjs.GameCode.GDPointsObjects2= [];
+gdjs.GameCode.GDPointsObjects3= [];
 gdjs.GameCode.GDIgnoreTimeObjects1= [];
 gdjs.GameCode.GDIgnoreTimeObjects2= [];
+gdjs.GameCode.GDIgnoreTimeObjects3= [];
 gdjs.GameCode.GDIgnoreDamageObjects1= [];
 gdjs.GameCode.GDIgnoreDamageObjects2= [];
+gdjs.GameCode.GDIgnoreDamageObjects3= [];
 gdjs.GameCode.GDIgnoreEnemyObjects1= [];
 gdjs.GameCode.GDIgnoreEnemyObjects2= [];
+gdjs.GameCode.GDIgnoreEnemyObjects3= [];
 gdjs.GameCode.GDOverheatObjects1= [];
 gdjs.GameCode.GDOverheatObjects2= [];
+gdjs.GameCode.GDOverheatObjects3= [];
 
 gdjs.GameCode.conditionTrue_0 = {val:false};
 gdjs.GameCode.condition0IsTrue_0 = {val:false};
@@ -65,7 +83,53 @@ gdjs.GameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(ru
 }
 
 
+{
+
+
+{
+}
+
+}
+
+
 };gdjs.GameCode.mapOfGDgdjs_46GameCode_46GDBluePlayerObjects1Objects = Hashtable.newFrom({"BluePlayer": gdjs.GameCode.GDBluePlayerObjects1});gdjs.GameCode.mapOfGDgdjs_46GameCode_46GDGreenFlagObjects1Objects = Hashtable.newFrom({"GreenFlag": gdjs.GameCode.GDGreenFlagObjects1});gdjs.GameCode.mapOfGDgdjs_46GameCode_46GDBluePlayerObjects1Objects = Hashtable.newFrom({"BluePlayer": gdjs.GameCode.GDBluePlayerObjects1});gdjs.GameCode.mapOfGDgdjs_46GameCode_46GDBlueCrystal2Objects1Objects = Hashtable.newFrom({"BlueCrystal2": gdjs.GameCode.GDBlueCrystal2Objects1});gdjs.GameCode.mapOfGDgdjs_46GameCode_46GDFlyingEnemyObjects1Objects = Hashtable.newFrom({"FlyingEnemy": gdjs.GameCode.GDFlyingEnemyObjects1});gdjs.GameCode.mapOfGDgdjs_46GameCode_46GDBluePlayerObjects1Objects = Hashtable.newFrom({"BluePlayer": gdjs.GameCode.GDBluePlayerObjects1});gdjs.GameCode.eventsList1 = function(runtimeScene) {
+
+{
+
+/* Reuse gdjs.GameCode.GDBluePlayerObjects1 */
+/* Reuse gdjs.GameCode.GDFlyingEnemyObjects1 */
+
+gdjs.GameCode.condition0IsTrue_0.val = false;
+gdjs.GameCode.condition1IsTrue_0.val = false;
+{
+for(var i = 0, k = 0, l = gdjs.GameCode.GDBluePlayerObjects1.length;i<l;++i) {
+    if ( gdjs.GameCode.GDBluePlayerObjects1[i].getVariableNumber(gdjs.GameCode.GDBluePlayerObjects1[i].getVariables().getFromIndex(1)) == 1 ) {
+        gdjs.GameCode.condition0IsTrue_0.val = true;
+        gdjs.GameCode.GDBluePlayerObjects1[k] = gdjs.GameCode.GDBluePlayerObjects1[i];
+        ++k;
+    }
+}
+gdjs.GameCode.GDBluePlayerObjects1.length = k;}if ( gdjs.GameCode.condition0IsTrue_0.val ) {
+{
+for(var i = 0, k = 0, l = gdjs.GameCode.GDFlyingEnemyObjects1.length;i<l;++i) {
+    if ( gdjs.GameCode.GDFlyingEnemyObjects1[i].getX() < 75 ) {
+        gdjs.GameCode.condition1IsTrue_0.val = true;
+        gdjs.GameCode.GDFlyingEnemyObjects1[k] = gdjs.GameCode.GDFlyingEnemyObjects1[i];
+        ++k;
+    }
+}
+gdjs.GameCode.GDFlyingEnemyObjects1.length = k;}}
+if (gdjs.GameCode.condition1IsTrue_0.val) {
+/* Reuse gdjs.GameCode.GDFlyingEnemyObjects1 */
+{for(var i = 0, len = gdjs.GameCode.GDFlyingEnemyObjects1.length ;i < len;++i) {
+    gdjs.GameCode.GDFlyingEnemyObjects1[i].setY(-(40));
+}
+}}
+
+}
+
+
+};gdjs.GameCode.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -161,7 +225,7 @@ gdjs.GameCode.conditionTrue_1.val = ((gdjs.evtTools.common.trunc(gdjs.evtTools.c
 }if (gdjs.GameCode.condition0IsTrue_0.val) {
 {runtimeScene.getGame().getVariables().getFromIndex(2).add(1);
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(100000);
-}{runtimeScene.getVariables().getFromIndex(1).setNumber(gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(0)) - gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) * 100000);
+}{runtimeScene.getVariables().getFromIndex(1).setNumber(0);
 }
 { //Subevents
 gdjs.GameCode.eventsList0(runtimeScene);} //End of subevents
@@ -278,7 +342,7 @@ gdjs.GameCode.GDBluePlayerObjects1.length = k;}}
 if (gdjs.GameCode.condition1IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("BlueCrystal2"), gdjs.GameCode.GDBlueCrystal2Objects1);
 /* Reuse gdjs.GameCode.GDBluePlayerObjects1 */
-{runtimeScene.getVariables().getFromIndex(1).add(1750);
+{runtimeScene.getVariables().getFromIndex(1).add(5000);
 }{runtimeScene.getVariables().getFromIndex(2).setNumber(1000);
 }{for(var i = 0, len = gdjs.GameCode.GDBlueCrystal2Objects1.length ;i < len;++i) {
     gdjs.GameCode.GDBlueCrystal2Objects1[i].hide(false);
@@ -395,7 +459,7 @@ gdjs.GameCode.condition2IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(ru
 }if ( gdjs.GameCode.condition2IsTrue_0.val ) {
 {
 {gdjs.GameCode.conditionTrue_1 = gdjs.GameCode.condition3IsTrue_0;
-gdjs.GameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(9591260);
+gdjs.GameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8434068);
 }
 }}
 }
@@ -413,7 +477,10 @@ gdjs.copyArray(runtimeScene.getObjects("Lives"), gdjs.GameCode.GDLivesObjects1);
 }{for(var i = 0, len = gdjs.GameCode.GDBluePlayerObjects1.length ;i < len;++i) {
     gdjs.GameCode.GDBluePlayerObjects1[i].returnVariable(gdjs.GameCode.GDBluePlayerObjects1[i].getVariables().getFromIndex(1)).setNumber(1);
 }
-}}
+}
+{ //Subevents
+gdjs.GameCode.eventsList1(runtimeScene);} //End of subevents
+}
 
 }
 
@@ -435,7 +502,7 @@ for(var i = 0, k = 0, l = gdjs.GameCode.GDBluePlayerObjects1.length;i<l;++i) {
 gdjs.GameCode.GDBluePlayerObjects1.length = k;}if ( gdjs.GameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.GameCode.conditionTrue_1 = gdjs.GameCode.condition1IsTrue_0;
-gdjs.GameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8243588);
+gdjs.GameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8436396);
 }
 }}
 if (gdjs.GameCode.condition1IsTrue_0.val) {
@@ -471,7 +538,7 @@ for(var i = 0, k = 0, l = gdjs.GameCode.GDBluePlayerObjects1.length;i<l;++i) {
 gdjs.GameCode.GDBluePlayerObjects1.length = k;}if ( gdjs.GameCode.condition1IsTrue_0.val ) {
 {
 {gdjs.GameCode.conditionTrue_1 = gdjs.GameCode.condition2IsTrue_0;
-gdjs.GameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(7861948);
+gdjs.GameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8438028);
 }
 }}
 }
@@ -761,42 +828,60 @@ runtimeScene.getOnceTriggers().startNewFrame();
 
 gdjs.GameCode.GDBluePlayerObjects1.length = 0;
 gdjs.GameCode.GDBluePlayerObjects2.length = 0;
+gdjs.GameCode.GDBluePlayerObjects3.length = 0;
 gdjs.GameCode.GDFlyingEnemyObjects1.length = 0;
 gdjs.GameCode.GDFlyingEnemyObjects2.length = 0;
+gdjs.GameCode.GDFlyingEnemyObjects3.length = 0;
 gdjs.GameCode.GDBlueCrystal2Objects1.length = 0;
 gdjs.GameCode.GDBlueCrystal2Objects2.length = 0;
+gdjs.GameCode.GDBlueCrystal2Objects3.length = 0;
 gdjs.GameCode.GDSmallNotBluePlatformObjects1.length = 0;
 gdjs.GameCode.GDSmallNotBluePlatformObjects2.length = 0;
+gdjs.GameCode.GDSmallNotBluePlatformObjects3.length = 0;
 gdjs.GameCode.GDSmallBluePlatformObjects1.length = 0;
 gdjs.GameCode.GDSmallBluePlatformObjects2.length = 0;
+gdjs.GameCode.GDSmallBluePlatformObjects3.length = 0;
 gdjs.GameCode.GDPurpleFloorObjects1.length = 0;
 gdjs.GameCode.GDPurpleFloorObjects2.length = 0;
+gdjs.GameCode.GDPurpleFloorObjects3.length = 0;
 gdjs.GameCode.GDYellowFloorObjects1.length = 0;
 gdjs.GameCode.GDYellowFloorObjects2.length = 0;
+gdjs.GameCode.GDYellowFloorObjects3.length = 0;
 gdjs.GameCode.GDBlueFloorObjects1.length = 0;
 gdjs.GameCode.GDBlueFloorObjects2.length = 0;
+gdjs.GameCode.GDBlueFloorObjects3.length = 0;
 gdjs.GameCode.GDGreenFloorObjects1.length = 0;
 gdjs.GameCode.GDGreenFloorObjects2.length = 0;
+gdjs.GameCode.GDGreenFloorObjects3.length = 0;
 gdjs.GameCode.GDRedFloorObjects1.length = 0;
 gdjs.GameCode.GDRedFloorObjects2.length = 0;
+gdjs.GameCode.GDRedFloorObjects3.length = 0;
 gdjs.GameCode.GDGreenFlagObjects1.length = 0;
 gdjs.GameCode.GDGreenFlagObjects2.length = 0;
+gdjs.GameCode.GDGreenFlagObjects3.length = 0;
 gdjs.GameCode.GDLivesObjects1.length = 0;
 gdjs.GameCode.GDLivesObjects2.length = 0;
+gdjs.GameCode.GDLivesObjects3.length = 0;
 gdjs.GameCode.GDTimerObjects1.length = 0;
 gdjs.GameCode.GDTimerObjects2.length = 0;
+gdjs.GameCode.GDTimerObjects3.length = 0;
 gdjs.GameCode.GDPointsObjects1.length = 0;
 gdjs.GameCode.GDPointsObjects2.length = 0;
+gdjs.GameCode.GDPointsObjects3.length = 0;
 gdjs.GameCode.GDIgnoreTimeObjects1.length = 0;
 gdjs.GameCode.GDIgnoreTimeObjects2.length = 0;
+gdjs.GameCode.GDIgnoreTimeObjects3.length = 0;
 gdjs.GameCode.GDIgnoreDamageObjects1.length = 0;
 gdjs.GameCode.GDIgnoreDamageObjects2.length = 0;
+gdjs.GameCode.GDIgnoreDamageObjects3.length = 0;
 gdjs.GameCode.GDIgnoreEnemyObjects1.length = 0;
 gdjs.GameCode.GDIgnoreEnemyObjects2.length = 0;
+gdjs.GameCode.GDIgnoreEnemyObjects3.length = 0;
 gdjs.GameCode.GDOverheatObjects1.length = 0;
 gdjs.GameCode.GDOverheatObjects2.length = 0;
+gdjs.GameCode.GDOverheatObjects3.length = 0;
 
-gdjs.GameCode.eventsList1(runtimeScene);
+gdjs.GameCode.eventsList2(runtimeScene);
 return;
 
 }

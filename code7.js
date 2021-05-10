@@ -25,6 +25,7 @@ gdjs.Game_32OverCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPressed(r
 {runtimeScene.getGame().getVariables().getFromIndex(6).setNumber(gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(0)));
 }{runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(0);
 }{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Game", false);
+}{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(0);
 }}
 
 }

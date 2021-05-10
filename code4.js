@@ -1,40 +1,58 @@
 gdjs.Game5Code = {};
 gdjs.Game5Code.GDBluePlayerObjects1= [];
 gdjs.Game5Code.GDBluePlayerObjects2= [];
+gdjs.Game5Code.GDBluePlayerObjects3= [];
 gdjs.Game5Code.GDFlyingEnemyObjects1= [];
 gdjs.Game5Code.GDFlyingEnemyObjects2= [];
+gdjs.Game5Code.GDFlyingEnemyObjects3= [];
 gdjs.Game5Code.GDBlueCrystal2Objects1= [];
 gdjs.Game5Code.GDBlueCrystal2Objects2= [];
+gdjs.Game5Code.GDBlueCrystal2Objects3= [];
 gdjs.Game5Code.GDSmallNotBluePlatformObjects1= [];
 gdjs.Game5Code.GDSmallNotBluePlatformObjects2= [];
+gdjs.Game5Code.GDSmallNotBluePlatformObjects3= [];
 gdjs.Game5Code.GDSmallBluePlatformObjects1= [];
 gdjs.Game5Code.GDSmallBluePlatformObjects2= [];
+gdjs.Game5Code.GDSmallBluePlatformObjects3= [];
 gdjs.Game5Code.GDPurpleFloorObjects1= [];
 gdjs.Game5Code.GDPurpleFloorObjects2= [];
+gdjs.Game5Code.GDPurpleFloorObjects3= [];
 gdjs.Game5Code.GDYellowFloorObjects1= [];
 gdjs.Game5Code.GDYellowFloorObjects2= [];
+gdjs.Game5Code.GDYellowFloorObjects3= [];
 gdjs.Game5Code.GDBlueFloorObjects1= [];
 gdjs.Game5Code.GDBlueFloorObjects2= [];
+gdjs.Game5Code.GDBlueFloorObjects3= [];
 gdjs.Game5Code.GDGreenFloorObjects1= [];
 gdjs.Game5Code.GDGreenFloorObjects2= [];
+gdjs.Game5Code.GDGreenFloorObjects3= [];
 gdjs.Game5Code.GDRedFloorObjects1= [];
 gdjs.Game5Code.GDRedFloorObjects2= [];
+gdjs.Game5Code.GDRedFloorObjects3= [];
 gdjs.Game5Code.GDGreenFlagObjects1= [];
 gdjs.Game5Code.GDGreenFlagObjects2= [];
+gdjs.Game5Code.GDGreenFlagObjects3= [];
 gdjs.Game5Code.GDLivesObjects1= [];
 gdjs.Game5Code.GDLivesObjects2= [];
+gdjs.Game5Code.GDLivesObjects3= [];
 gdjs.Game5Code.GDTimerObjects1= [];
 gdjs.Game5Code.GDTimerObjects2= [];
+gdjs.Game5Code.GDTimerObjects3= [];
 gdjs.Game5Code.GDPointsObjects1= [];
 gdjs.Game5Code.GDPointsObjects2= [];
+gdjs.Game5Code.GDPointsObjects3= [];
 gdjs.Game5Code.GDIgnoreTimeObjects1= [];
 gdjs.Game5Code.GDIgnoreTimeObjects2= [];
+gdjs.Game5Code.GDIgnoreTimeObjects3= [];
 gdjs.Game5Code.GDIgnoreDamageObjects1= [];
 gdjs.Game5Code.GDIgnoreDamageObjects2= [];
+gdjs.Game5Code.GDIgnoreDamageObjects3= [];
 gdjs.Game5Code.GDIgnoreEnemyObjects1= [];
 gdjs.Game5Code.GDIgnoreEnemyObjects2= [];
+gdjs.Game5Code.GDIgnoreEnemyObjects3= [];
 gdjs.Game5Code.GDOverheatObjects1= [];
 gdjs.Game5Code.GDOverheatObjects2= [];
+gdjs.Game5Code.GDOverheatObjects3= [];
 
 gdjs.Game5Code.conditionTrue_0 = {val:false};
 gdjs.Game5Code.condition0IsTrue_0 = {val:false};
@@ -65,7 +83,53 @@ gdjs.Game5Code.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(r
 }
 
 
+{
+
+
+{
+}
+
+}
+
+
 };gdjs.Game5Code.mapOfGDgdjs_46Game5Code_46GDBluePlayerObjects1Objects = Hashtable.newFrom({"BluePlayer": gdjs.Game5Code.GDBluePlayerObjects1});gdjs.Game5Code.mapOfGDgdjs_46Game5Code_46GDGreenFlagObjects1Objects = Hashtable.newFrom({"GreenFlag": gdjs.Game5Code.GDGreenFlagObjects1});gdjs.Game5Code.mapOfGDgdjs_46Game5Code_46GDBluePlayerObjects1Objects = Hashtable.newFrom({"BluePlayer": gdjs.Game5Code.GDBluePlayerObjects1});gdjs.Game5Code.mapOfGDgdjs_46Game5Code_46GDBlueCrystal2Objects1Objects = Hashtable.newFrom({"BlueCrystal2": gdjs.Game5Code.GDBlueCrystal2Objects1});gdjs.Game5Code.mapOfGDgdjs_46Game5Code_46GDFlyingEnemyObjects1Objects = Hashtable.newFrom({"FlyingEnemy": gdjs.Game5Code.GDFlyingEnemyObjects1});gdjs.Game5Code.mapOfGDgdjs_46Game5Code_46GDBluePlayerObjects1Objects = Hashtable.newFrom({"BluePlayer": gdjs.Game5Code.GDBluePlayerObjects1});gdjs.Game5Code.eventsList1 = function(runtimeScene) {
+
+{
+
+/* Reuse gdjs.Game5Code.GDBluePlayerObjects1 */
+/* Reuse gdjs.Game5Code.GDFlyingEnemyObjects1 */
+
+gdjs.Game5Code.condition0IsTrue_0.val = false;
+gdjs.Game5Code.condition1IsTrue_0.val = false;
+{
+for(var i = 0, k = 0, l = gdjs.Game5Code.GDBluePlayerObjects1.length;i<l;++i) {
+    if ( gdjs.Game5Code.GDBluePlayerObjects1[i].getVariableNumber(gdjs.Game5Code.GDBluePlayerObjects1[i].getVariables().getFromIndex(1)) == 1 ) {
+        gdjs.Game5Code.condition0IsTrue_0.val = true;
+        gdjs.Game5Code.GDBluePlayerObjects1[k] = gdjs.Game5Code.GDBluePlayerObjects1[i];
+        ++k;
+    }
+}
+gdjs.Game5Code.GDBluePlayerObjects1.length = k;}if ( gdjs.Game5Code.condition0IsTrue_0.val ) {
+{
+for(var i = 0, k = 0, l = gdjs.Game5Code.GDFlyingEnemyObjects1.length;i<l;++i) {
+    if ( gdjs.Game5Code.GDFlyingEnemyObjects1[i].getX() < 75 ) {
+        gdjs.Game5Code.condition1IsTrue_0.val = true;
+        gdjs.Game5Code.GDFlyingEnemyObjects1[k] = gdjs.Game5Code.GDFlyingEnemyObjects1[i];
+        ++k;
+    }
+}
+gdjs.Game5Code.GDFlyingEnemyObjects1.length = k;}}
+if (gdjs.Game5Code.condition1IsTrue_0.val) {
+/* Reuse gdjs.Game5Code.GDFlyingEnemyObjects1 */
+{for(var i = 0, len = gdjs.Game5Code.GDFlyingEnemyObjects1.length ;i < len;++i) {
+    gdjs.Game5Code.GDFlyingEnemyObjects1[i].setY(-(40));
+}
+}}
+
+}
+
+
+};gdjs.Game5Code.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -179,7 +243,7 @@ gdjs.Game5Code.conditionTrue_1.val = ((gdjs.evtTools.common.trunc(gdjs.evtTools.
 }if (gdjs.Game5Code.condition0IsTrue_0.val) {
 {runtimeScene.getGame().getVariables().getFromIndex(2).add(1);
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(100000);
-}{runtimeScene.getVariables().getFromIndex(1).setNumber(gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(0)) - gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) * 100000);
+}{runtimeScene.getVariables().getFromIndex(1).setNumber(0);
 }
 { //Subevents
 gdjs.Game5Code.eventsList0(runtimeScene);} //End of subevents
@@ -296,7 +360,7 @@ gdjs.Game5Code.GDBluePlayerObjects1.length = k;}}
 if (gdjs.Game5Code.condition1IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("BlueCrystal2"), gdjs.Game5Code.GDBlueCrystal2Objects1);
 /* Reuse gdjs.Game5Code.GDBluePlayerObjects1 */
-{runtimeScene.getVariables().getFromIndex(1).add(1750);
+{runtimeScene.getVariables().getFromIndex(1).add(5000);
 }{runtimeScene.getVariables().getFromIndex(2).setNumber(1000);
 }{for(var i = 0, len = gdjs.Game5Code.GDBlueCrystal2Objects1.length ;i < len;++i) {
     gdjs.Game5Code.GDBlueCrystal2Objects1[i].hide(false);
@@ -413,7 +477,7 @@ gdjs.Game5Code.condition2IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(r
 }if ( gdjs.Game5Code.condition2IsTrue_0.val ) {
 {
 {gdjs.Game5Code.conditionTrue_1 = gdjs.Game5Code.condition3IsTrue_0;
-gdjs.Game5Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(9591260);
+gdjs.Game5Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8434068);
 }
 }}
 }
@@ -431,7 +495,10 @@ gdjs.copyArray(runtimeScene.getObjects("Lives"), gdjs.Game5Code.GDLivesObjects1)
 }{for(var i = 0, len = gdjs.Game5Code.GDBluePlayerObjects1.length ;i < len;++i) {
     gdjs.Game5Code.GDBluePlayerObjects1[i].returnVariable(gdjs.Game5Code.GDBluePlayerObjects1[i].getVariables().getFromIndex(1)).setNumber(1);
 }
-}}
+}
+{ //Subevents
+gdjs.Game5Code.eventsList1(runtimeScene);} //End of subevents
+}
 
 }
 
@@ -453,7 +520,7 @@ for(var i = 0, k = 0, l = gdjs.Game5Code.GDBluePlayerObjects1.length;i<l;++i) {
 gdjs.Game5Code.GDBluePlayerObjects1.length = k;}if ( gdjs.Game5Code.condition0IsTrue_0.val ) {
 {
 {gdjs.Game5Code.conditionTrue_1 = gdjs.Game5Code.condition1IsTrue_0;
-gdjs.Game5Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8243588);
+gdjs.Game5Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8436396);
 }
 }}
 if (gdjs.Game5Code.condition1IsTrue_0.val) {
@@ -489,7 +556,7 @@ for(var i = 0, k = 0, l = gdjs.Game5Code.GDBluePlayerObjects1.length;i<l;++i) {
 gdjs.Game5Code.GDBluePlayerObjects1.length = k;}if ( gdjs.Game5Code.condition1IsTrue_0.val ) {
 {
 {gdjs.Game5Code.conditionTrue_1 = gdjs.Game5Code.condition2IsTrue_0;
-gdjs.Game5Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(7861948);
+gdjs.Game5Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8438028);
 }
 }}
 }
@@ -779,42 +846,60 @@ runtimeScene.getOnceTriggers().startNewFrame();
 
 gdjs.Game5Code.GDBluePlayerObjects1.length = 0;
 gdjs.Game5Code.GDBluePlayerObjects2.length = 0;
+gdjs.Game5Code.GDBluePlayerObjects3.length = 0;
 gdjs.Game5Code.GDFlyingEnemyObjects1.length = 0;
 gdjs.Game5Code.GDFlyingEnemyObjects2.length = 0;
+gdjs.Game5Code.GDFlyingEnemyObjects3.length = 0;
 gdjs.Game5Code.GDBlueCrystal2Objects1.length = 0;
 gdjs.Game5Code.GDBlueCrystal2Objects2.length = 0;
+gdjs.Game5Code.GDBlueCrystal2Objects3.length = 0;
 gdjs.Game5Code.GDSmallNotBluePlatformObjects1.length = 0;
 gdjs.Game5Code.GDSmallNotBluePlatformObjects2.length = 0;
+gdjs.Game5Code.GDSmallNotBluePlatformObjects3.length = 0;
 gdjs.Game5Code.GDSmallBluePlatformObjects1.length = 0;
 gdjs.Game5Code.GDSmallBluePlatformObjects2.length = 0;
+gdjs.Game5Code.GDSmallBluePlatformObjects3.length = 0;
 gdjs.Game5Code.GDPurpleFloorObjects1.length = 0;
 gdjs.Game5Code.GDPurpleFloorObjects2.length = 0;
+gdjs.Game5Code.GDPurpleFloorObjects3.length = 0;
 gdjs.Game5Code.GDYellowFloorObjects1.length = 0;
 gdjs.Game5Code.GDYellowFloorObjects2.length = 0;
+gdjs.Game5Code.GDYellowFloorObjects3.length = 0;
 gdjs.Game5Code.GDBlueFloorObjects1.length = 0;
 gdjs.Game5Code.GDBlueFloorObjects2.length = 0;
+gdjs.Game5Code.GDBlueFloorObjects3.length = 0;
 gdjs.Game5Code.GDGreenFloorObjects1.length = 0;
 gdjs.Game5Code.GDGreenFloorObjects2.length = 0;
+gdjs.Game5Code.GDGreenFloorObjects3.length = 0;
 gdjs.Game5Code.GDRedFloorObjects1.length = 0;
 gdjs.Game5Code.GDRedFloorObjects2.length = 0;
+gdjs.Game5Code.GDRedFloorObjects3.length = 0;
 gdjs.Game5Code.GDGreenFlagObjects1.length = 0;
 gdjs.Game5Code.GDGreenFlagObjects2.length = 0;
+gdjs.Game5Code.GDGreenFlagObjects3.length = 0;
 gdjs.Game5Code.GDLivesObjects1.length = 0;
 gdjs.Game5Code.GDLivesObjects2.length = 0;
+gdjs.Game5Code.GDLivesObjects3.length = 0;
 gdjs.Game5Code.GDTimerObjects1.length = 0;
 gdjs.Game5Code.GDTimerObjects2.length = 0;
+gdjs.Game5Code.GDTimerObjects3.length = 0;
 gdjs.Game5Code.GDPointsObjects1.length = 0;
 gdjs.Game5Code.GDPointsObjects2.length = 0;
+gdjs.Game5Code.GDPointsObjects3.length = 0;
 gdjs.Game5Code.GDIgnoreTimeObjects1.length = 0;
 gdjs.Game5Code.GDIgnoreTimeObjects2.length = 0;
+gdjs.Game5Code.GDIgnoreTimeObjects3.length = 0;
 gdjs.Game5Code.GDIgnoreDamageObjects1.length = 0;
 gdjs.Game5Code.GDIgnoreDamageObjects2.length = 0;
+gdjs.Game5Code.GDIgnoreDamageObjects3.length = 0;
 gdjs.Game5Code.GDIgnoreEnemyObjects1.length = 0;
 gdjs.Game5Code.GDIgnoreEnemyObjects2.length = 0;
+gdjs.Game5Code.GDIgnoreEnemyObjects3.length = 0;
 gdjs.Game5Code.GDOverheatObjects1.length = 0;
 gdjs.Game5Code.GDOverheatObjects2.length = 0;
+gdjs.Game5Code.GDOverheatObjects3.length = 0;
 
-gdjs.Game5Code.eventsList1(runtimeScene);
+gdjs.Game5Code.eventsList2(runtimeScene);
 return;
 
 }
